@@ -1,0 +1,209 @@
+import React from "react";
+import { Text, StyleSheet, Image, View, ScrollView } from "react-native";
+
+const Profilephoto = require("../../assets/Photo.png");
+
+const Profile = () => {
+  return (
+    <ScrollView style={styles.container}>
+      <View style={styles.content}>
+        <Image style={styles.profilePic} source={Profilephoto} />
+        <View
+          style={{
+            flexDirection: "column",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <Text style={styles.name}>Rohith Kumar</Text>
+          <Text style={styles.address}>Karanataka India</Text>
+          <Text style={styles.studentText}>Student Status</Text>
+          <Text style={styles.standardText}>4th year Student</Text>
+          <Text style={styles.yearText}>Year of Graduation</Text>
+          <Text style={styles.dayText}>2022</Text>
+          <View>
+            <Text style={styles.identityText}>Identity Not verified</Text>
+            <Text style={styles.verifyText}>Documents Not verified</Text>
+          </View>
+        </View>
+      </View>
+      <View style={styles.block}>
+        <View>
+          <Text style={styles.date}>Tentative Start date</Text>
+          <Text style={styles.textdate}>April 22, 2022</Text>
+        </View>
+        <View>
+          <Text style={styles.total}>Total Duration</Text>
+          <Text style={styles.textweek}>4 Weeks</Text>
+        </View>
+      </View>
+      <View style={styles.longText}>
+        <Text style={styles.main}>Medical School</Text>
+        <Text style={styles.textMain}>
+          All India institue of medical Science, Bangalore,Karnataka,India
+        </Text>
+        <View style={styles.lineText}>
+          <Text>Highlight of your CV/Resume</Text>
+          <Text style={styles.paraText}>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
+            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
+            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+            no sea takimata sanctus est Lorem ipsum dolor sit amet.
+          </Text>
+        </View>
+      </View>
+      <View>
+        <Text style={styles.contactText}>Contact Details</Text>
+        <Text>
+          Name:<Text style={styles.nameText}>Rohith Kumar</Text>
+        </Text>
+        <Text>
+          Contact No:<Text style={styles.nameText}> + 91 900025637</Text>
+        </Text>
+        <Text>
+          Email Id:<Text style={styles.nameText}>Rohith@gmail.com</Text>
+        </Text>
+        <View style={{ flexDirection: "row" }}>
+          <View>
+            <Text>Address:</Text>
+          </View>
+          <View>
+            <Text style={styles.addressText}>
+              No 123,5th main road 4th cross, Jayanagar, Bangalore-60050
+            </Text>
+          </View>
+        </View>
+        <Text>
+          Country:<Text style={styles.nameText}>India</Text>
+        </Text>
+        <Text>
+          State:<Text style={styles.nameText}>Karanataka</Text>
+        </Text>
+        <Text style={styles.contactText}>Emergency Contact Person</Text>
+        <Text>
+          Name:<Text style={styles.nameText}>Rohith Kumar</Text>
+        </Text>
+        <Text>
+          Contact No:<Text style={styles.nameText}>+ 91 900025637</Text>
+        </Text>
+      </View>
+    </ScrollView>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    width: "100%",
+    marginVertical: 50,
+    paddingHorizontal: 16,
+  },
+  content: {
+    flexDirection: "row",
+    marginBottom: 30,
+    justifyContent: "space-evenly",
+  },
+  profilePic: {
+    width: 168,
+    marginLeft: 9,
+    marginRight: 21,
+  },
+  name: {
+    fontSize: 20,
+  },
+  address: {
+    color: "#A2A2A2",
+    fontSize: 16,
+  },
+  studentText: {
+    fontSize: 16,
+    textDecorationLine: "underline",
+  },
+  standardText: {
+    color: "#A2A2A2",
+    fontSize: 16,
+  },
+  yearText: {
+    fontSize: 16,
+    textDecorationLine: "underline",
+  },
+  dayText: {
+    color: "#A2A2A2",
+    fontSize: 16,
+  },
+  identityText: {
+    fontSize: 12,
+    color: "white",
+    padding: 2,
+    backgroundColor: "red",
+    marginBottom: 5,
+    textAlign: "center",
+    borderRadius: 6,
+  },
+  verifyText: {
+    fontSize: 12,
+    color: "white",
+    padding: 2,
+    backgroundColor: "red",
+    textAlign: "center",
+    borderRadius: 6,
+  },
+  date: {
+    fontSize: 18,
+  },
+  total: {
+    fontSize: 18,
+  },
+  textdate: {
+    fontSize: 16,
+    color: "#A2A2A2",
+    textAlign: "center",
+  },
+  textweek: {
+    fontSize: 16,
+    color: "#A2A2A2",
+    textAlign: "center",
+  },
+  block: {
+    flexDirection: "row",
+
+    justifyContent: "space-evenly",
+  },
+  main: {
+    fontSize: 16,
+    marginTop: 39,
+  },
+  textMain: {
+    fontSize: 16,
+    color: "#A2A2A2",
+  },
+
+  lineText: {
+    marginTop: 33,
+    fontSize: 16,
+  },
+  paraText: {
+    marginTop: 18,
+  },
+  contactText: {
+    textDecorationLine: "underline",
+    textDecoration: "none",
+    fontSize: 18,
+    marginTop: 38,
+    marginBottom: 13,
+  },
+  nameText: {
+    color: "#A2A2A2",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 8,
+  },
+  addressText: {
+    color: "#A2A2A2",
+    justifyContent: "center",
+  },
+});
+export default Profile;
