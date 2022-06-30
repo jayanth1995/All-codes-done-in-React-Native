@@ -1,0 +1,100 @@
+import React from "react";
+import { Text, View, StyleSheet, Image,TouchableOpacity } from "react-native";
+
+const contactIcon = require("../../assets/Icons/contact.png");
+const doctorIcon = require("../../assets/Icons/doctor.png");
+const peopleIcon = require("../../assets/Icons/people.png");
+const paymentIcon = require("../../assets/Icons/payment.png");
+
+const Dashboard = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.content}>
+        <Text style={styles.dayText}>Friday,Mar 26</Text>
+        <Text style={styles.priceText}>$200</Text>
+        <Text style={styles.txt}>Earnings</Text>
+        <Text style={styles.text}>Orders Received:10</Text>
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          width: "100%",
+          justifyContent: "space-evenly",
+          
+        }}
+      >
+        <TouchableOpacity style={styles.box}>
+          <Image style={styles.icon} source={doctorIcon} />
+          <Text style={styles.inside}>Your service</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.box}>
+          <Image style={styles.icon} source={peopleIcon} />
+          <Text style={styles.inside}>Client Support</Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          flexDirection: "row",
+          width: "100%",
+          justifyContent: "space-evenly",
+          
+        }}
+      >
+        <TouchableOpacity style={styles.box}>
+          <Image style={styles.icon} source={contactIcon} />
+          <Text style={styles.inside}>Help</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.box}>
+          <Image style={styles.icon} source={paymentIcon} />
+          <Text style={styles.inside}>Payment</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+
+  content: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  priceText: {
+    fontSize: 50,
+    margin: 11,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  dayText: {
+    fontSize: 16,
+    color: "#A2A2A2",
+  },
+  txt: {
+    fontSize: 14,
+    margin: 23,
+  },
+  text: {
+    fontSize: 18,
+    margin: 17,
+  },
+  box: {
+    padding: 23,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  inside:{
+       color:"#A2A2A2",
+  },
+  icon: {
+    padding: 50,
+    height: 50,
+    width: 50,
+  },
+});
+
+export default Dashboard;
