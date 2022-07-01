@@ -1,0 +1,84 @@
+import React from "react";
+import { View, Text, TextInput, StyleSheet, Image,Button } from "react-native";
+
+const profilePic = require("../../assets/Photo.png");
+
+const Form = () => {
+  return (
+    <View style={styles.container}>
+      <Image style={styles.Photo} source={profilePic} />
+      <View style={{ flexDirection: "row", justifyContent: "space-between" }}>
+        <View style={{ flexDirection: "column" }}>
+          <Text style={styles.label}>Full Name</Text>
+          <TextInput style={styles.input} placeholder="Enter UserName" />
+        </View>
+        <View style={{ flexDirection: "column" }}>
+          <Text style={styles.label}>Age</Text>
+          <TextInput style={styles.input} placeholder="Enter Age" />
+        </View>
+      </View>
+      <View >
+        <Text style={styles.label}>Email Id</Text>
+        <TextInput style={styles.labelExpand} placeholder="Enter Email Id" />
+      </View>
+      <View >
+        <Text style={styles.label}>Address</Text>
+        <TextInput style={styles.largeText} placeholder="Enter Permanent Address" autoComplete="off"/>
+      </View>
+      <View style={{ margin:20, }}>
+      <Button style={styles.buttonText} title="Forgot PassWord" />
+      </View>
+      <View style={{ margin:20, }}>
+      <Button style={styles.buttonText1} title="Create a New Passward" />
+      </View>
+      <View style={{ margin:20, }}>
+      <Button style={styles.buttonText1} title="SUBMIT" />
+      </View>
+      
+    </View>
+    
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginVertical: 16,
+    marginHorizontal: 16,
+  },
+  Photo: {
+    flexDirection: "row",
+  },
+  input: {
+    borderWidth: 0.5,
+    height: 45,
+    width: 175,
+  },
+  labelExpand:{
+    borderWidth: 0.5,
+    height: 45,
+    width: 380,
+    justifyContent:"center",
+    marginBottom:10,
+ },
+ largeText:{
+    borderWidth: 0.5,
+    height: 75,
+    width: 380,
+    marginBottom:25,
+  
+ },
+ buttonText:{
+     color:"blue",
+    margin:20,
+ },
+    label:{
+        margin:10,
+
+    },
+    buttonText1:{
+        marginBottom:5
+    }
+
+ 
+});
+export default Form;
