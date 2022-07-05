@@ -1,0 +1,81 @@
+import React from "react";
+import { View, Text, StyleSheet, Image } from "react-native";
+
+const ProfilePhoto = require("../../assets/Rectangle105.png");
+
+const startIcon = require("../../assets/Icons/logo.png");
+
+const PhotoReview = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.content}>
+        <Image style={styles.Image} source={ProfilePhoto} />
+        <View style={styles.header}>
+          <Text style={styles.serviceText}>
+            Service Title loreum ipsum dolar isu
+          </Text>
+          <Text style={styles.insideText}>
+            Lorem ipsum dolor sit amet,consetetu sadipscing elitr,Sed diam
+            nonumy eirmod tempor invidunt ut labore et
+          </Text>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }} >
+            <Text style={styles.doller}>$10-100</Text>
+            <View style={{ flexDirection: "row", justifyContent: "center" }}>
+              <Image style={styles.Icon} source={startIcon} />
+              <Text style={styles.dateText}> 4.9 (3022)</Text>
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 50,
+  },
+  content: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    borderTopWidth: 0.35,
+    borderBottomWidth: 0.35,
+    borderColor: "#707070",
+  },
+  header: {
+    paddingVertical: 12,
+    marginLeft: 15,
+
+    flex: 1,
+  },
+  Image: {
+    justifyContent: "space-around",
+  
+    marginTop: 20,
+  },
+  serviceText: {
+    fontWeight: "bold",
+    marginTop:15,
+  },
+  insideText: {
+    color: "#707070",
+ 
+    fontSize: 13,
+    marginTop: 8,
+    fontSize: 13,
+  },
+  Icon: {
+    height: 18,
+    width: 18,
+  },
+  dateText: {
+    fontSize: 14,
+    },
+    doller:{
+   
+    fontWeight:"medium",
+    fontSize:16,
+    },
+});
+export default PhotoReview;
