@@ -1,0 +1,63 @@
+import React from "react";
+import { View,  StyleSheet, TouchableOpacity, Text } from "react-native";
+
+const Buttons = () => {
+  return (
+    <View style={styles.container}>
+      <View
+        style={{
+          flexDirection: "row",
+          justifyContent: "space-around",
+        }}
+      >
+        <TouchableOpacity style={styles.buttonField}>
+          <Text style={styles.buttonText}>Package 1</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.buttonField}>
+          <Text style={styles.buttonText}>Package 2</Text>
+        </TouchableOpacity>
+      </View>
+      <View
+        style={{
+          justifyContent: "space-around",
+          flexDirection: "row",
+          marginTop: 20,
+        }}
+      >
+        <TouchableOpacity style={styles.buttonField}>
+          <Text style={styles.buttonText}>Package 3</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.buttonField}>
+          <Text style={styles.buttonText}>Package 4</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  );
+};
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    paddingHorizontal: 16,
+  },
+  buttonField: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginBottom: 10,
+  },
+  buttonText: {
+    fontSize: 16,
+    color: "#707070",
+    borderWidth: 0.1,
+    borderColor: "#707070",
+
+    borderRadius: 3,
+    paddingHorizontal: 40,
+    paddingVertical: 14,
+    marginHorizontal: 10,
+  },
+});
+
+export default Buttons;
