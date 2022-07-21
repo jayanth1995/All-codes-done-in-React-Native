@@ -1,0 +1,64 @@
+import React from "react";
+import { View, Text, StyleSheet, Image, TextInput, Button } from "react-native";
+
+
+const MeritLogo = require("../../assets/Companylogo.png")
+
+const LoginPage = () => {
+    return (
+        <View style={styles.container}>
+            <View style={styles.content}>
+                <View>
+                    <Image style={styles.logostyling} source={MeritLogo} />
+
+                    <View style={styles.logincontent}>
+                        <Text style={styles.loginText}>Login ID -</Text>
+                        <TextInput style={styles.input} placeholder="Login ID" ></TextInput>
+                    </View>
+                    <View style={styles.logincontent}>
+                        <Text style={styles.loginText}>Password -</Text>
+                        <TextInput style={styles.input} placeholder="Password"></TextInput>
+                    </View>
+                    <Button title="Login" color={"#2196f3"} onPress={() => alert("This is login")} />
+                </View>
+            </View>
+         </View>
+    )
+}
+export default LoginPage;
+
+const styles = StyleSheet.create({
+
+    container: {
+        flex: 1,
+    },
+    content: {
+        alignItems: "center",
+        flex: 1,
+        justifyContent: "center",
+        width: "100%",
+        marginBottom: 20,
+    },
+    logostyling: {
+        justifyContent: "center",
+        width: 250,
+        height: 50,
+        marginBottom: 40,
+    },
+    input: {
+        justifyContent: "center",
+        alignItems: "center",
+        flex: 1,
+    },
+    loginText: {
+        flex: 0.5,
+        fontSize: 16,
+    },
+    logincontent: {
+        flexDirection: "row",
+        textAlign: "center",
+        alignItems: "center",
+        marginBottom: 25,
+    },
+
+})
