@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StyleSheet, Image, Text,  } from "react-native";
+import { View, StyleSheet, Image, Text } from "react-native";
 import Button from "./Button";
 
 const MeritLogo = require("../../assets/Companylogo.png")
@@ -13,19 +13,15 @@ const BioMetric = () => {
                     <Text style={styles.label}>Bio Metric Verification</Text>
                 </View>
                 <View style={styles.row}>
-                    <View style={styles.item}>
-                       <Button>Non Aadhar</Button>
-                    </View>
-                    <View style={styles.item}>
-                    <Button>Aadhar</Button>
-                    </View>
+                    <Button containerStyle={{ flex: 0.3 }}>Non Aadhar</Button>
+                    <Button containerStyle={{ flex: 0.3 }}> Aadhar</Button>
                 </View>
-                <View style={styles.doubleButton}>
-                    <View style={styles.item}><Button>Level 3 Verification</Button></View>
-                    <View style={styles.item}><Button>Level 3 Verification</Button></View>
+                <View style={styles.levelButton}>
+                    <Button containerStyle={{ flex: 0.3 }}>Level 3 Verification</Button>
+                    <Button containerStyle={{ flex: 0.3 }}>Level 3 Verification</Button>
                 </View>
-                <View style={styles.singleButton}>
-                    <View style={styles.item}><Button>Reports</Button></View>
+                <View style={styles.repoButton}>
+                    <Button containerStyle={{ flex: 0.3 }}>Reports</Button>
                 </View>
             </View>
         </View>
@@ -46,22 +42,17 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         marginTop: 45,
-       
     },
     title: {
         width: "60%",
         flexDirection: "row",
         justifyContent: "center",
-      
-        backgroundColor:"grey",
-       
+        backgroundColor: "grey",
     },
     label: {
         fontSize: 42,
         color: "white",
         fontWeight: "700",
-       
-        
     },
     row: {
         width: "100%",
@@ -69,26 +60,22 @@ const styles = StyleSheet.create({
         marginTop: 50,
         marginBottom: 100,
         justifyContent: "space-between",
-
         paddingHorizontal: 60,
-
     },
-    item: {
-        height: 50,
-        width: 300,
-       
-
-    },
-    doubleButton: {
+    levelButton: {
         width: "100%",
         flexDirection: "row",
         marginTop: 50,
-        marginBottom:100,
+        marginBottom: 100,
         justifyContent: "space-between"
     },
-    singleButton: {
-        marginTop: 40,
+    repoButton: {
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "center",
     },
-   
+
 
 })
+
+
